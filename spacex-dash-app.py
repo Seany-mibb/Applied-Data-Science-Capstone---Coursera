@@ -68,7 +68,7 @@ def get_pie_chart(input_site):
         names = filtered_df['class'].value_counts().index
         title = f'Success vs Failed Launches for {input_site}'
     
-    fig = px.pie(values=values, names=names, title=title)
+    fig = px.pie(values=values, names=names, title=title, color_discrete_map={0: 'red', 1: 'green'})
     
     return fig
 # TASK 4:
